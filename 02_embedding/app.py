@@ -132,14 +132,36 @@ def main():
     df = load_metadata()
 
     # ---- tabs ----
-    tab1, tab2, tab3, tab_cluster, tab4, tab_nano = st.tabs([
+    tab_overview, tab1, tab2, tab3, tab_cluster, tab4, tab_nano = st.tabs([
+        "🏠 Overview",
         "🔍 Visual Similarity Search",
         "💰 Price Prediction Evaluation",
         "🗺️ Embedding Clusters",
         "📊 Cluster Price Prediction",
         "🖼️ Komar & Melamid Predictions",
-        "🍌 NanoBanana Prompts"
+        "🍌 Art Generation"
     ])
+
+    # =====================================================================
+    # TAB OVERVIEW
+    # =====================================================================
+    with tab_overview:
+        st.header("Project Overview")
+        st.markdown(
+            "This project is for the midterm project of the NYU course **Special Topics in Digital Media - Interrogating AI Tools for Creative Practice DM-UY 4913**.\n\n"
+            "The inspiration for this project stemmed from the week 6 activity of making and using crowdsourced database content. I became curious about predicting the price of artworks from **Komar & Melamid — The People's Choice / Most Wanted Paintings (1994–1998)**.\n\n"
+            "### Goal\n"
+            "The core objective is to predict the auction prices of artworks and generate AI-based imagery that is statistically likely to evaluate at high prices. By analyzing historical sale data, the model identifies features and trends associated with premium values. The project specifically investigates how these predictive models evaluate the conceptual paintings by Komar & Melamid.\n\n"
+            "### Project Phases\n"
+            "1. **Data Extraction**: Scraping and cleansing a large-scale dataset of fine art auction records.\n"
+            "2. **Embedding & Price Prediction**: Developing ML models to map visual and textual features to sale prices.\n"
+            "3. **Elaborating & Generative Insights**: Using model insights to generate \"high-value\" prompts and analyzing the K&M \"Most Wanted\" series.\n\n"
+            "### AI Tools Used\n"
+            "This project was developed with the assistance of several advanced AI tools and models:\n"
+            "- **Coding Assistance**: Antigravity's Gemini 3.1 Pro and Claude Opus 4.6.\n"
+            "- **Image Generation**: Gemini Nanobanana 2.\n"
+            "- **Text Generation**: Gemini 3 Flash (used for generating descriptive \"vibes\" for thematic clusters)."
+        )
 
     # =====================================================================
     # TAB 1: Visual Similarity Search
@@ -585,10 +607,10 @@ def main():
                 y_true_usd = np.expm1(y_true_c)
                 y_pred_usd = np.expm1(y_pred_c)
                 
+                plot_df = pd.DataFrame({'Actual': y_true_usd, 'Predicted': y_pred_usd})
                 fig = px.scatter(
-                    x=y_true_usd,
-                    y=y_pred_usd,
-                    labels={'x': 'Actual Sold Price (USD)', 'y': 'Predicted Price (USD)'},
+                    plot_df, x='Actual', y='Predicted',
+                    labels={'Actual': 'Actual Sold Price (USD)', 'Predicted': 'Predicted Price (USD)'},
                     title=f"Cluster {selected_c_id} {mode.capitalize()} - Actual vs Predicted (Log Scale)",
                     opacity=0.6,
                     color_discrete_sequence=['#AB63FA']
@@ -852,10 +874,10 @@ def main():
             st.warning("Komar & Melamid prediction results not found. Please run `predict_km_paintings.py` in the `03_elaborating` directory first.")
 
     # =====================================================================
-    # TAB NANO: NanoBanana Prompts
+    # TAB NANO: Art Generation
     # =====================================================================
     with tab_nano:
-        st.header("NanoBanana Prompts Generation")
+        st.header("Art Generation")
         st.write("Generate descriptive prompts for 4 price quartiles inside each cluster to feed into the NanoBanana UI.")
         
         meta_list = load_cluster_metadata(mode)
@@ -912,21 +934,21 @@ def main():
                         st.markdown("##### 10 Artworks Used For This Prompt")
                         artworks = t_data.get("artworks", [])
                         if artworks:
-                            cols_aw = st.columns(10)
+                            cols_aw_1 = st.columns(5)
+                            cols_aw_2 = st.columns(5)
                             for idx, aw in enumerate(artworks[:10]):
-                                with cols_aw[idx]:
+                                col = cols_aw_1[idx] if idx < 5 else cols_aw_2[idx - 5]
+                                with col:
                                     img_p = Path(aw["image"])
+                                    matching_rows = df[df["local_image_path"] == aw["image"]]
+                                    img_url = matching_rows.iloc[0].get("Image_URL", "") if not matching_rows.empty else ""
+                                    
                                     if img_p.exists():
-                                        img = Image.open(img_p)
-                                        w, h = img.size
-                                        sq_size = min(w, h)
-                                        left = (w - sq_size)/2
-                                        top = (h - sq_size)/2
-                                        img = img.crop((left, top, left+sq_size, top+sq_size))
-                                        img = img.resize((100, 100))
-                                        st.image(img, use_container_width=True)
+                                        st.image(str(img_p), use_container_width=True)
+                                    elif img_url:
+                                        st.image(img_url, use_container_width=True)
                                     else:
-                                        st.write("No img")
+                                        st.info("No img")
                         else:
                             st.info("No artworks found for this tier.")
                     
