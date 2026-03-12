@@ -482,7 +482,7 @@ def main():
 - **Line inside box** = **median** price (50th percentile)
 - **Whiskers** = extend to 1.5× the interquartile range
 - **Dots beyond whiskers** = outliers (unusually high or low prices)
-- **Y-axis is log scale** — each gridline is 10× the previous one ($10 → $100 → $1K → $10K…)
+- **Y-axis is log scale** — each gridline is 10× the previous one (\$10 → \$100 → \$1K → \$10K…)
 - A **tall box** means wide price variance; a **short box** means prices are tightly grouped
 - Compare **median lines** across clusters to see which visual styles command higher prices
             """)
@@ -916,10 +916,10 @@ def main():
                 quartiles = nano_curr.get("quartiles", [0, 0, 0])
                 
                 tier_configs = [
-                    ("Tier 1: Economy", f"Under ${quartiles[0]:,.0f}", "q1"),
-                    ("Tier 2: Mid-Market", f"${quartiles[0]:,.0f} - ${quartiles[1]:,.0f}", "q2"),
-                    ("Tier 3: Premium", f"${quartiles[1]:,.0f} - ${quartiles[2]:,.0f}", "q3"),
-                    ("Tier 4: Masterpiece", f"Over ${quartiles[2]:,.0f}", "q4"),
+                    ("Tier 1: Economy", f"Under \${quartiles[0]:,.0f}", "q1"),
+                    ("Tier 2: Mid-Market", f"\${quartiles[0]:,.0f} - \${quartiles[1]:,.0f}", "q2"),
+                    ("Tier 3: Premium", f"\${quartiles[1]:,.0f} - \${quartiles[2]:,.0f}", "q3"),
+                    ("Tier 4: Masterpiece", f"Over \${quartiles[2]:,.0f}", "q4"),
                 ]
                 
                 for t_name, t_price, t_key in tier_configs:
