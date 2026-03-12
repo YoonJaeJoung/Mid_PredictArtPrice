@@ -1,0 +1,722 @@
+[
+  {
+    "cluster_id": 0,
+    "count": 14880,
+    "avg_price": 39606.745833333334,
+    "median_price": 1948.0,
+    "min_price": 2.0,
+    "max_price": 68320000.0,
+    "std_price": 763323.0774260206,
+    "representative_artworks": [
+      {
+        "id": "66684",
+        "title": "A view of Santa Maura, Levkas, Ionian Islands",
+        "artist": "Edward Lear",
+        "price": 5925.0
+      },
+      {
+        "id": "2837",
+        "title": "“November Dawn: Strensall Common, York”",
+        "artist": "Piers Browne",
+        "price": 471.0
+      },
+      {
+        "id": "57171",
+        "title": "Solicitudo rustica",
+        "artist": "After Pieter Bruegel the Elder",
+        "price": 4346.0
+      },
+      {
+        "id": "111361",
+        "title": "WINTER",
+        "artist": "Edward Steel Harper",
+        "price": 546.0
+      },
+      {
+        "id": "105238",
+        "title": "Der Engel erscheint Hagar",
+        "artist": "Dutch School (17)",
+        "price": 1340.0
+      },
+      {
+        "id": "60353",
+        "title": "FLACHE LANDSCHAFT MIT STADT",
+        "artist": "Ignaz Stolz the Younger",
+        "price": 371.0
+      },
+      {
+        "id": "116688",
+        "title": "Paysage",
+        "artist": "Pierre Tal-Coat",
+        "price": 1230.0
+      },
+      {
+        "id": "76749",
+        "title": "Dusk, Cromer",
+        "artist": "Paul Darley",
+        "price": 525.0
+      },
+      {
+        "id": "47419",
+        "title": "\"A Wooded River Landscape with Fisherfolk in the Foreground\"",
+        "artist": "Follower of Albert Meyeringh",
+        "price": 1625.0
+      },
+      {
+        "id": "49882",
+        "title": "\"River City\"",
+        "artist": "Tom Richard Cavanaugh",
+        "price": 1250.0
+      }
+    ],
+    "description": "European landscapes and nature scenes — pastoral, river, and rural views from Old Master to early modern traditions."
+  },
+  {
+    "cluster_id": 1,
+    "count": 13863,
+    "avg_price": 39840.42292433095,
+    "median_price": 1833.0,
+    "min_price": 2.0,
+    "max_price": 62160000.0,
+    "std_price": 683354.0026673613,
+    "representative_artworks": [
+      {
+        "id": "101792",
+        "title": "La translunaire",
+        "artist": "Joan Miró",
+        "price": 2601.0
+      },
+      {
+        "id": "107893",
+        "title": "Eclipse",
+        "artist": "Sonia Delaunay",
+        "price": 1787.0
+      },
+      {
+        "id": "46341",
+        "title": "Lot et Garonne",
+        "artist": "Jacques Villeglé",
+        "price": 2100.0
+      },
+      {
+        "id": "116564",
+        "title": "Six works from the mythological scenes series",
+        "artist": "Joe Tilson",
+        "price": 2663.0
+      },
+      {
+        "id": "71642",
+        "title": "Trees Blowing and Blowing Like Arms Akimbo",
+        "artist": "Steven Sorman",
+        "price": 191.0
+      },
+      {
+        "id": "53511",
+        "title": "Petite barrière",
+        "artist": "Joan Miró",
+        "price": 2853.0
+      },
+      {
+        "id": "23202",
+        "title": "Hot Slick",
+        "artist": "Bruce McLean",
+        "price": 773.0
+      },
+      {
+        "id": "8561",
+        "title": "Objets dans l'espace",
+        "artist": "After Fernand Léger",
+        "price": 243.0
+      },
+      {
+        "id": "120814",
+        "title": "Hot Slick",
+        "artist": "Bruce McLean",
+        "price": 510.0
+      },
+      {
+        "id": "100534",
+        "title": "In Celebration",
+        "artist": "Robert Motherwell",
+        "price": 2125.0
+      }
+    ],
+    "description": "Modern graphic prints and lithographs by major 20th-century names (Miró, Delaunay, Motherwell, Villeglé) with bold color and geometric forms."
+  },
+  {
+    "cluster_id": 2,
+    "count": 5410,
+    "avg_price": 27530.903881700553,
+    "median_price": 2323.0,
+    "min_price": 14.0,
+    "max_price": 8236239.0,
+    "std_price": 186113.8944548971,
+    "representative_artworks": [
+      {
+        "id": "68666",
+        "title": "POPPIES AND STILL LIFE",
+        "artist": "Mary Nicol Neill Armour",
+        "price": 3391.0
+      },
+      {
+        "id": "93415",
+        "title": "花果",
+        "artist": "Guan Liang",
+        "price": 3446799.0
+      },
+      {
+        "id": "26334",
+        "title": "Le Bouquet (Sorlier 8)",
+        "artist": "After Marc Chagall",
+        "price": 5296.0
+      },
+      {
+        "id": "23876",
+        "title": "Nature Morte",
+        "artist": "Maurice de Vlaminck",
+        "price": 32000.0
+      },
+      {
+        "id": "58932",
+        "title": "Vase of Flowers",
+        "artist": "Fred Yates",
+        "price": 3840.0
+      },
+      {
+        "id": "2873",
+        "title": "Pansies in a yellow vase",
+        "artist": "Paul Lucien Maze",
+        "price": 148.0
+      },
+      {
+        "id": "30332",
+        "title": "Still life with flowers",
+        "artist": "Albert Naur",
+        "price": 323.0
+      },
+      {
+        "id": "75321",
+        "title": "Still life with flowers",
+        "artist": "Albert Naur",
+        "price": 163.0
+      },
+      {
+        "id": "19476",
+        "title": "Still Life with Rose and Pitcher",
+        "artist": "Euan Uglow",
+        "price": 118438.0
+      },
+      {
+        "id": "5471",
+        "title": "NATURA MORTA CON VASO DI FIORI",
+        "artist": "Gino Ritter von Finetti",
+        "price": 248.0
+      }
+    ],
+    "description": "Floral still lifes and nature mortes — bouquets, vases, and tabletop compositions across impressionist and post-impressionist styles."
+  },
+  {
+    "cluster_id": 3,
+    "count": 19507,
+    "avg_price": 28329.621674270773,
+    "median_price": 1560.0,
+    "min_price": 2.0,
+    "max_price": 32260000.0,
+    "std_price": 414047.7012293196,
+    "representative_artworks": [
+      {
+        "id": "69014",
+        "title": "OHNE TITEL",
+        "artist": "Keith Haring",
+        "price": 39640.0
+      },
+      {
+        "id": "36368",
+        "title": "Kiss of the Spider Woman Cast",
+        "artist": "Albert Hirschfeld",
+        "price": 812.0
+      },
+      {
+        "id": "17743",
+        "title": "A Seed Planted Gently",
+        "artist": "Giorgiko",
+        "price": 660.0
+      },
+      {
+        "id": "83989",
+        "title": "Enfant dans les bras",
+        "artist": "Anatoly Zverev",
+        "price": 411.0
+      },
+      {
+        "id": "72486",
+        "title": "Sem título",
+        "artist": "Malangatana Valente Ngwenya",
+        "price": 581.0
+      },
+      {
+        "id": "14254",
+        "title": "Untitled",
+        "artist": "Purvis Young",
+        "price": 480.0
+      },
+      {
+        "id": "91083",
+        "title": "夏日钟馗",
+        "artist": "Zhang Guiming",
+        "price": 2939.0
+      },
+      {
+        "id": "118017",
+        "title": "Les Petits Arlequins",
+        "artist": "Marc Chagall",
+        "price": 4160.0
+      },
+      {
+        "id": "60421",
+        "title": "Zereisset eure Ketten Weisse Schwarze Gelbe!",
+        "artist": "Rudolf Schlichter",
+        "price": 12521.0
+      },
+      {
+        "id": "26282",
+        "title": "Sirène au poète, from Nice and the Côte d'Azur (Charles Sorlier 27)",
+        "artist": "After Marc Chagall",
+        "price": 5958.0
+      }
+    ],
+    "description": "Figurative and expressive works on paper — drawings, caricatures, and prints by contemporary and mid-century artists (Haring, Chagall, Hirschfeld)."
+  },
+  {
+    "cluster_id": 4,
+    "count": 21259,
+    "avg_price": 53652.474528435014,
+    "median_price": 2048.0,
+    "min_price": 5.0,
+    "max_price": 236360000.0,
+    "std_price": 1717672.7737470747,
+    "representative_artworks": [
+      {
+        "id": "14763",
+        "title": "Girl",
+        "artist": "Arie Wachenhauzer",
+        "price": 59.0
+      },
+      {
+        "id": "32912",
+        "title": "ENGEL",
+        "artist": "Follower of Mikhail Aleksandrovich Vrubel",
+        "price": 1153.0
+      },
+      {
+        "id": "101205",
+        "title": "A Confrontation",
+        "artist": "James Abbott McNeill Whistler",
+        "price": 10160.0
+      },
+      {
+        "id": "29833",
+        "title": "The Prayer",
+        "artist": "Brandt Hoffman Alexander",
+        "price": 54.0
+      },
+      {
+        "id": "55742",
+        "title": "Jesus als Knabe unter den Schriftgelehrten",
+        "artist": "Rembrandt van Rijn",
+        "price": 1738.0
+      },
+      {
+        "id": "96475",
+        "title": "The Raising of Comrade Lazarus",
+        "artist": "Diane Victor",
+        "price": 366.0
+      },
+      {
+        "id": "12235",
+        "title": "The Agony in the Garden",
+        "artist": "Workshop of Francesco del Cairo",
+        "price": 13970.0
+      },
+      {
+        "id": "100998",
+        "title": "La Toilette",
+        "artist": "Henry Mirande",
+        "price": 108.0
+      },
+      {
+        "id": "26957",
+        "title": "Portrait de Famille, Homme aux bras croisés (BL 1029 M.383)",
+        "artist": "Pablo Picasso",
+        "price": 4470.0
+      },
+      {
+        "id": "9989",
+        "title": "Kulinaria - Feinschmecker",
+        "artist": "Bruno Heroux",
+        "price": 139.0
+      }
+    ],
+    "description": "Dark-toned figurative and religious works — etchings, drawings, and paintings featuring human figures, biblical scenes, and portrait studies; highest price ceiling cluster (M)."
+  },
+  {
+    "cluster_id": 5,
+    "count": 14296,
+    "avg_price": 39769.67739227756,
+    "median_price": 1740.0,
+    "min_price": 5.0,
+    "max_price": 86000000.0,
+    "std_price": 997517.536404897,
+    "representative_artworks": [
+      {
+        "id": "24155",
+        "title": "Venetian Lagoon",
+        "artist": "Stefano Bersani",
+        "price": 451.0
+      },
+      {
+        "id": "74803",
+        "title": "Gloucester",
+        "artist": "Edward Henry Potthast",
+        "price": 768.0
+      },
+      {
+        "id": "60861",
+        "title": "KANAL IN VENEDIG",
+        "artist": "Artur Nikodem",
+        "price": 707.0
+      },
+      {
+        "id": "47308",
+        "title": "LIGHT GLOW, PORTENCROSS",
+        "artist": "Peter Foyle",
+        "price": 209.0
+      },
+      {
+        "id": "97678",
+        "title": "COASTAL WALL",
+        "artist": "Earl George Alexander Eugene Douglas Haig",
+        "price": 2731.0
+      },
+      {
+        "id": "54942",
+        "title": "Scenă dobrogeană",
+        "artist": "Henri H. Catargi",
+        "price": 1386.0
+      },
+      {
+        "id": "99934",
+        "title": "Heimweg vom Feld, bzw. Heimkehr der Fischer",
+        "artist": "Anonymous (20)",
+        "price": 151.0
+      },
+      {
+        "id": "95696",
+        "title": "Scorcio di paese",
+        "artist": "Oscar Ricciardi",
+        "price": 209.0
+      },
+      {
+        "id": "121748",
+        "title": "Industrial Cityscape",
+        "artist": "Geoffrey Key",
+        "price": 2696.0
+      },
+      {
+        "id": "46514",
+        "title": "Figures in a landscape",
+        "artist": "Gwyneth Johnstone",
+        "price": 3459.0
+      }
+    ],
+    "description": "Impressionist and plein-air coastal, harbor, and urban cityscapes — warm-toned scenes of Venice, ports, and working landscapes."
+  },
+  {
+    "cluster_id": 6,
+    "count": 3385,
+    "avg_price": 41638.67474150665,
+    "median_price": 7152.0,
+    "min_price": 34.0,
+    "max_price": 5666300.0,
+    "std_price": 221908.69893494743,
+    "representative_artworks": [
+      {
+        "id": "62672",
+        "title": "行书七言联",
+        "artist": "Yang Tianlin",
+        "price": 2926.0
+      },
+      {
+        "id": "93062",
+        "title": "行书诗",
+        "artist": "Pu Ru",
+        "price": 1641.0
+      },
+      {
+        "id": "92140",
+        "title": "行书 临颜真卿《乞米帖》",
+        "artist": "Liang Yan",
+        "price": 12805.0
+      },
+      {
+        "id": "93766",
+        "title": "为蒋复璁作 行书自作诗",
+        "artist": "Ma Yifu",
+        "price": 18875.0
+      },
+      {
+        "id": "90626",
+        "title": "书法",
+        "artist": "Huang Yanpei",
+        "price": 1469.0
+      },
+      {
+        "id": "86423",
+        "title": "行书",
+        "artist": "Feng Youlan",
+        "price": 2449.0
+      },
+      {
+        "id": "90593",
+        "title": "行书",
+        "artist": "Cheng Shifa",
+        "price": 1633.0
+      },
+      {
+        "id": "27572",
+        "title": "行书祝寿诗",
+        "artist": "Huang Binhong",
+        "price": 34752.0
+      },
+      {
+        "id": "92673",
+        "title": "行书五言诗",
+        "artist": "Ma Yifu",
+        "price": 18052.0
+      },
+      {
+        "id": "92693",
+        "title": "行书王昌龄《出塞》",
+        "artist": "Lai Shaoqi",
+        "price": 2625.0
+      }
+    ],
+    "description": "Premium Chinese calligraphy — running script (行書) and scholarly brush works by renowned literati; highest median price cluster (,152)."
+  },
+  {
+    "cluster_id": 7,
+    "count": 12806,
+    "avg_price": 38469.40793378104,
+    "median_price": 2005.0,
+    "min_price": 11.0,
+    "max_price": 48335000.0,
+    "std_price": 593976.4787039793,
+    "representative_artworks": [
+      {
+        "id": "13670",
+        "title": "untitled",
+        "artist": "Sam Middleton",
+        "price": 1000.0
+      },
+      {
+        "id": "59320",
+        "title": "Couple",
+        "artist": "Bert Jäger",
+        "price": 1507.0
+      },
+      {
+        "id": "27883",
+        "title": "‘Decay’",
+        "artist": "VHILS",
+        "price": 575.0
+      },
+      {
+        "id": "44236",
+        "title": "Foggy picture",
+        "artist": "Aron Gabor",
+        "price": 2117.0
+      },
+      {
+        "id": "34605",
+        "title": "Komposition mit weiblicher Figur und Leiter",
+        "artist": "Stefan Plenkers",
+        "price": 5552.0
+      },
+      {
+        "id": "65348",
+        "title": "Composition",
+        "artist": "Antonio Corpora",
+        "price": 119.0
+      },
+      {
+        "id": "7104",
+        "title": "Mixed Lot of 3 Works on Paper",
+        "artist": "Antonius van der Pas",
+        "price": 471.0
+      },
+      {
+        "id": "110208",
+        "title": "IO E LA CITTA'",
+        "artist": "Enos Malagutti",
+        "price": 401.0
+      },
+      {
+        "id": "67517",
+        "title": "Sans titre",
+        "artist": "Zao Wou-Ki",
+        "price": 2246.0
+      },
+      {
+        "id": "52628",
+        "title": "Sans titre",
+        "artist": "Jean-Paul Riopelle",
+        "price": 23038.0
+      }
+    ],
+    "description": "Post-war and contemporary abstract compositions — gestural, lyrical abstraction, and mixed-media works by international abstractionists (Zao Wou-Ki, Riopelle)."
+  },
+  {
+    "cluster_id": 8,
+    "count": 15636,
+    "avg_price": 37196.22723202865,
+    "median_price": 2065.0,
+    "min_price": 2.0,
+    "max_price": 54660000.0,
+    "std_price": 644017.8778566578,
+    "representative_artworks": [
+      {
+        "id": "45592",
+        "title": "Le fumeur de Kea",
+        "artist": "Alecos Fassianos",
+        "price": 16247.0
+      },
+      {
+        "id": "75844",
+        "title": "Silver Flag",
+        "artist": "Banksy",
+        "price": 6402.0
+      },
+      {
+        "id": "103197",
+        "title": "Deep Moon",
+        "artist": "Park Dae-Sung",
+        "price": 15999.0
+      },
+      {
+        "id": "60977",
+        "title": "Strati geologici",
+        "artist": "Gianni Dova",
+        "price": 1159.0
+      },
+      {
+        "id": "66277",
+        "title": "Time Capsule",
+        "artist": "Millo",
+        "price": 79.0
+      },
+      {
+        "id": "35687",
+        "title": "Labyrint světa a ráj srdce (konvolut 7 kusů grafických listů)",
+        "artist": "Albin Brunovsky",
+        "price": 13805.0
+      },
+      {
+        "id": "80456",
+        "title": "Mickey Mouse Fantasia SOLD-OUT Sorcerer's Apprentice Progression Cel Limited Edition #108/350",
+        "artist": "Walt Disney Studios",
+        "price": 2160.0
+      },
+      {
+        "id": "14229",
+        "title": "Cow Katchina",
+        "artist": "James Havard",
+        "price": 5625.0
+      },
+      {
+        "id": "27208",
+        "title": "Umbrella and Bird",
+        "artist": "Alois Janak",
+        "price": 100.0
+      },
+      {
+        "id": "67232",
+        "title": "The Choice",
+        "artist": "Bagus Triyono",
+        "price": 386.0
+      }
+    ],
+    "description": "Eclectic contemporary and pop-influenced works — street art (Banksy), animation cels (Disney), East Asian ink paintings, and bold graphic compositions."
+  },
+  {
+    "cluster_id": 9,
+    "count": 897,
+    "avg_price": 6713.186176142698,
+    "median_price": 1125.0,
+    "min_price": 11.0,
+    "max_price": 3577198.0,
+    "std_price": 119629.57036048036,
+    "representative_artworks": [
+      {
+        "id": "49565",
+        "title": "Portrait de l'épouse de l’artiste",
+        "artist": "Constantin Terechkovitch",
+        "price": 322.0
+      },
+      {
+        "id": "50252",
+        "title": "Composition et formes",
+        "artist": "Pierre Grimm",
+        "price": 1265.0
+      },
+      {
+        "id": "50178",
+        "title": "Composition",
+        "artist": "Pierre Grimm",
+        "price": 1380.0
+      },
+      {
+        "id": "50253",
+        "title": "Figures verticales",
+        "artist": "Pierre Grimm",
+        "price": 920.0
+      },
+      {
+        "id": "50091",
+        "title": "Poires",
+        "artist": "Edouard Zelenine",
+        "price": 460.0
+      },
+      {
+        "id": "35915",
+        "title": "Untitled (from a sketch book)",
+        "artist": "Klaus Fussmann",
+        "price": 2056.0
+      },
+      {
+        "id": "47218",
+        "title": "Marine au clair de lune",
+        "artist": "Baron Jean Antoine Théodore Gudin",
+        "price": 438.0
+      },
+      {
+        "id": "40103",
+        "title": "Oiseau sous le soleil",
+        "artist": "Pablo Picasso",
+        "price": 1858.0
+      },
+      {
+        "id": "44521",
+        "title": "Etude de figure drapée en pied les bras ouverts",
+        "artist": "Alphonse Colas",
+        "price": 576.0
+      },
+      {
+        "id": "45495",
+        "title": "Etude de figure d’après un plâtre",
+        "artist": "Leon Vaudoyer",
+        "price": 980.0
+      }
+    ],
+    "description": "Affordable French School sketches and academic studies — figure drawings, compositions, and small-format works on paper; smallest and most affordable cluster."
+  }
+]

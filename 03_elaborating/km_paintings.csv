@@ -1,0 +1,31 @@
+country,country_code,category,image_path
+United States,us,most_wanted,03_elaborating/images/most_wanted/us.jpg
+United States,us,least_wanted,03_elaborating/images/least_wanted/us.jpg
+France,fr,most_wanted,03_elaborating/images/most_wanted/fr.jpg
+France,fr,least_wanted,03_elaborating/images/least_wanted/fr.jpg
+Turkey,tr,most_wanted,03_elaborating/images/most_wanted/tr.jpg
+Turkey,tr,least_wanted,03_elaborating/images/least_wanted/tr.jpg
+Iceland,is,most_wanted,03_elaborating/images/most_wanted/is.jpg
+Iceland,is,least_wanted,03_elaborating/images/least_wanted/is.jpg
+Russia,ru,most_wanted,03_elaborating/images/most_wanted/ru.jpg
+Russia,ru,least_wanted,03_elaborating/images/least_wanted/ru.jpg
+Denmark,dk,most_wanted,03_elaborating/images/most_wanted/dk.jpg
+Denmark,dk,least_wanted,03_elaborating/images/least_wanted/dk.jpg
+China,cn,most_wanted,03_elaborating/images/most_wanted/cn.jpg
+China,cn,least_wanted,03_elaborating/images/least_wanted/cn.jpg
+Kenya,ke,most_wanted,03_elaborating/images/most_wanted/ke.jpg
+Kenya,ke,least_wanted,03_elaborating/images/least_wanted/ke.jpg
+Finland,fi,most_wanted,03_elaborating/images/most_wanted/fi.jpg
+Finland,fi,least_wanted,03_elaborating/images/least_wanted/fi.jpg
+Portugal,pt,most_wanted,03_elaborating/images/most_wanted/pt.jpg
+Portugal,pt,least_wanted,03_elaborating/images/least_wanted/pt.jpg
+Netherlands,nl,most_wanted,03_elaborating/images/most_wanted/nl.jpg
+Netherlands,nl,least_wanted,03_elaborating/images/least_wanted/nl.jpg
+Ukraine,ua,most_wanted,03_elaborating/images/most_wanted/ua.jpg
+Ukraine,ua,least_wanted,03_elaborating/images/least_wanted/ua.jpg
+Italy,it,most_wanted,03_elaborating/images/most_wanted/it.jpg
+Italy,it,least_wanted,03_elaborating/images/least_wanted/it.jpg
+Germany,de,most_wanted,03_elaborating/images/most_wanted/de.jpg
+Germany,de,least_wanted,03_elaborating/images/least_wanted/de.jpg
+The Web,web,most_wanted,03_elaborating/images/most_wanted/web.jpg
+The Web,web,least_wanted,03_elaborating/images/least_wanted/web.jpg

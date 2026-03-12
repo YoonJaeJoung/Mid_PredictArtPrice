@@ -1,0 +1,32 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# downloaded DOMs
+01_dataPreparation/raw DOM
+
+# downloaded images
+01_dataPreparation/image
+
+# deprecated files
+01_dataPreparation/deprecated
+02_embedding/deprecated
+03_elaborating/deprecated
+
+# parquet files
+02_embedding/auction_image_only.parquet
+02_embedding/auction_multimodal.parquet
+
+# checkpoint files
+02_embedding/checkpoints
+
+# AI prompts and scratchpads
+**/prompt.md
+

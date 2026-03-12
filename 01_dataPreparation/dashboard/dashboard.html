@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artworks Data Analytics Dashboard</title>
+    
+    <!-- Tailwind CSS for aesthetic styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#0f172a', /* slate-900 */
+                        card: '#1e293b', /* slate-800 */
+                        textPrimary: '#f8fafc',
+                        textSecondary: '#94a3b8',
+                        accent: '#3b82f6', /* blue-500 */
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Chart.js for visualizations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    
+    <!-- PapaParse for fast CSV parsing -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #0f172a; color: #f8fafc; }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        
+        /* Custom Loader */
+        .loader {
+            border: 4px solid rgba(255,255,255,0.1);
+            border-top: 4px solid #3b82f6;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    </style>
+</head>
+<body class="min-h-screen relative p-6">
+
+    <!-- Header -->
+    <header class="mb-8">
+        <h1 class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400 tracking-tight">
+            Auction Data Dashboard
+        </h1>
+        <p class="text-textSecondary mt-2">Exploratory visual analysis of the cleaned artworks dataset.</p>
+    </header>
+
+    <!-- Loading Overlay -->
+    <div id="loading" class="absolute inset-0 z-50 flex flex-col items-center justify-center bg-dark/80 backdrop-blur-sm transition-opacity duration-300">
+        <div class="loader mb-4"></div>
+        <p id="loadingText" class="text-lg font-medium animate-pulse">Parsing 38MB CSV Data...</p>
+    </div>
+
+    <!-- Dashboard Content -->
+    <main id="dashboard" class="opacity-0 transition-opacity duration-700 max-w-7xl mx-auto space-y-6 hidden">
+        
+        <!-- Top Metrics Row -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div class="glass-card p-6 flex flex-col justify-center items-center text-center">
+                <p class="text-textSecondary text-sm font-semibold uppercase tracking-wider mb-2">Total Artworks</p>
+                <div id="totalArtworks" class="text-5xl font-bold text-white">0</div>
+            </div>
+            <div class="glass-card p-6 flex flex-col justify-center items-center text-center">
+                <p class="text-textSecondary text-sm font-semibold uppercase tracking-wider mb-2">Market Volume</p>
+                <div id="totalSalesStr" class="text-5xl font-bold text-yellow-400">$0</div>
+            </div>
+            <div class="glass-card p-6 flex flex-col justify-center items-center text-center">
+                <p class="text-textSecondary text-sm font-semibold uppercase tracking-wider mb-2">Unique Artists</p>
+                <div id="totalArtists" class="text-5xl font-bold text-blue-400">0</div>
+            </div>
+            <div class="glass-card p-6 flex flex-col justify-center items-center text-center">
+                <p class="text-textSecondary text-sm font-semibold uppercase tracking-wider mb-2">Auction Houses</p>
+                <div id="totalAuctions" class="text-5xl font-bold text-emerald-400">0</div>
+            </div>
+        </div>
+
+        <!-- Middle Row: Sales & Made Years -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div class="glass-card p-6 h-96">
+                <h2 class="text-xl font-semibold mb-4 text-gray-200">Volume of Sales (by Month)</h2>
+                <div class="relative h-full w-full pb-8">
+                    <canvas id="salesChart"></canvas>
+                </div>
+            </div>
+            <div class="glass-card p-6 h-96">
+                <h2 class="text-xl font-semibold mb-4 text-gray-200">Creation Date (by Decade)</h2>
+                <div class="relative h-full w-full pb-8">
+                    <canvas id="madeYearChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Row: Artists and Auctions -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div class="glass-card p-6 h-[500px]">
+                <h2 class="text-xl font-semibold mb-4 text-gray-200">Most Frequent Artists (Top 15)</h2>
+                <div class="relative h-full w-full pb-10">
+                    <canvas id="artistChart"></canvas>
+                </div>
+            </div>
+            <div class="glass-card p-6 h-[500px]">
+                <h2 class="text-xl font-semibold mb-4 text-gray-200">Auction House Market Share</h2>
+                <div class="relative h-full w-full flex justify-center pb-10">
+                    <canvas id="auctionChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- New Row: Price Analytics -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div class="glass-card p-6 h-96">
+                <h2 class="text-xl font-semibold mb-4 text-gray-200">Price Distribution</h2>
+                <div class="relative h-full w-full pb-8">
+                    <canvas id="priceDistChart"></canvas>
+                </div>
+            </div>
+            <div class="glass-card p-6 h-96">
+                <h2 class="text-xl font-semibold mb-4 text-gray-200">Average Price by Sale Month</h2>
+                <div class="relative h-full w-full pb-8">
+                    <canvas id="avgPriceYearChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Set default Chart.js configuration for dark mode
+        Chart.defaults.color = '#94a3b8';
+        Chart.defaults.font.family = "'Inter', sans-serif";
+        Chart.defaults.scale.grid.color = 'rgba(255, 255, 255, 0.05)';
+
+        // 1. Fetch and Parse CSV
+        document.addEventListener("DOMContentLoaded", () => {
+            let rowCount = 0;
+            const accumulatedData = [];
+            const loadingText = document.getElementById('loadingText');
+            
+            Papa.parse(`../artworks_data_clean.csv?v=${Date.now()}`, {
+                download: true,
+                header: true,
+                skipEmptyLines: true,
+                worker: false, // Disabled web worker to prevent local cross-origin block
+                chunk: function(results) {
+                    // Accumulate data and update progress
+                    accumulatedData.push(...results.data);
+                    rowCount += results.data.length;
+                    
+                    // Update UI immediately (chunks are large enough to avoid thread block)
+                    loadingText.innerText = `Parsing Data: ${rowCount.toLocaleString()} rows...`;
+                },
+                complete: function() {
+                    loadingText.innerText = "Processing Data for Charts...";
+                    setTimeout(() => processData(accumulatedData), 100);
+                },
+                error: function(err) {
+                    console.error("PapaParse Error:", err);
+                    loadingText.innerText = "Error loading CSV. Make sure you serve this file via HTTP/localhost.";
+                    loadingText.classList.add('text-red-400');
+                }
+            });
+        });
+
+        // 2. Process Data and Populate Charts
+        function processData(data) {
+            // Metrics
+            document.getElementById('totalArtworks').innerText = data.length.toLocaleString();
+            
+            let totalPriceAll = 0;
+            const priceBuckets = { "<$1k": 0, "$1k-$10k": 0, "$10k-$50k": 0, "$50k-$100k": 0, "$100k-$500k": 0, "$500k-$1m": 0, ">$1m": 0 };
+            const yrPriceSums = {};
+            const yrPriceCounts = {};
+
+            // Aggregation objects
+            const saleMonthsObj = {};
+            const madeDecadesObj = {};
+            const auctionsObj = {};
+            const artistsObj = {};
+
+            data.forEach(row => {
+                let priceNum = 0;
+                if (row.Sold_Price_USD) {
+                    const strVal = String(row.Sold_Price_USD).replace(/[^0-9.]/g, '');
+                    const p = parseFloat(strVal);
+                    if (!isNaN(p) && p > 0) {
+                        priceNum = p;
+                        totalPriceAll += p;
+                        if (p < 1000) priceBuckets["<$1k"]++;
+                        else if (p < 10000) priceBuckets["$1k-$10k"]++;
+                        else if (p < 50000) priceBuckets["$10k-$50k"]++;
+                        else if (p < 100000) priceBuckets["$50k-$100k"]++;
+                        else if (p < 500000) priceBuckets["$100k-$500k"]++;
+                        else if (p < 1000000) priceBuckets["$500k-$1m"]++;
+                        else priceBuckets[">$1m"]++;
+                    }
+                }
+
+                // Sale Date (Group by YYYY-MM)
+                if (row.Sold_Date) {
+                    const d = new Date(row.Sold_Date);
+                    if (!isNaN(d.getTime())) {
+                        // Format as YYYY-MM
+                        const ym = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}`;
+                        saleMonthsObj[ym] = (saleMonthsObj[ym] || 0) + 1;
+                        if (priceNum > 0) {
+                            yrPriceSums[ym] = (yrPriceSums[ym] || 0) + priceNum;
+                            yrPriceCounts[ym] = (yrPriceCounts[ym] || 0) + 1;
+                        }
+                    }
+                }
+
+                // Made Year (grouped by decade)
+                if (row.Year_Made && row.Year_Made !== 'Unknown Year' && row.Year_Made.trim() !== '') {
+                    // Extract first 4 consecutive digits
+                    const mMatch = row.Year_Made.match(/\d{4}/);
+                    if (mMatch) {
+                        const y = parseInt(mMatch[0], 10);
+                        // Filter out unreasonable years
+                        if (y > 1000 && y <= new Date().getFullYear()) {
+                            const decade = Math.floor(y / 10) * 10;
+                            madeDecadesObj[`${decade}s`] = (madeDecadesObj[`${decade}s`] || 0) + 1;
+                        }
+                    }
+                }
+
+                // Auctions
+                if (row.Auction_Name && row.Auction_Name.trim() !== '') {
+                    auctionsObj[row.Auction_Name] = (auctionsObj[row.Auction_Name] || 0) + 1;
+                }
+
+                // Artists
+                if (row.Artist_Name && row.Artist_Name.trim() !== '' && !row.Artist_Name.toLowerCase().includes('unknown')) {
+                    artistsObj[row.Artist_Name] = (artistsObj[row.Artist_Name] || 0) + 1;
+                }
+            });
+
+            // Set top counts
+            document.getElementById('totalArtists').innerText = Object.keys(artistsObj).length.toLocaleString();
+            document.getElementById('totalAuctions').innerText = Object.keys(auctionsObj).length.toLocaleString();
+            const formatter = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumSignificantDigits: 3, notation: "compact" });
+            document.getElementById('totalSalesStr').innerText = formatter.format(totalPriceAll);
+
+            // Prepare Chart Data
+            
+            // Sales Chart (Bar)
+            const sortedSaleMonths = Object.keys(saleMonthsObj).sort();
+            const saleCounts = sortedSaleMonths.map(ym => saleMonthsObj[ym]);
+
+            // Made Year Chart (Line or Bar)
+            const sortedDecades = Object.keys(madeDecadesObj).sort((a,b) => parseInt(a) - parseInt(b));
+            const decadeCounts = sortedDecades.map(d => madeDecadesObj[d]);
+
+            // Top Artists (Horizontal Bar)
+            const topArtists = Object.entries(artistsObj)
+                .sort((a, b) => b[1] - a[1])
+                .slice(0, 15);
+            
+            // Auction Market Share (Doughnut) - Top 15 + Others
+            const sortedAuctions = Object.entries(auctionsObj).sort((a,b) => b[1] - a[1]);
+            const top15Auctions = sortedAuctions.slice(0, 15);
+            const otherAuctionsCount = sortedAuctions.slice(15).reduce((acc, curr) => acc + curr[1], 0);
+            if (otherAuctionsCount > 0) top15Auctions.push(["Others", otherAuctionsCount]);
+
+            // Price Chart (Line)
+            const sortedPriceYears = Object.keys(yrPriceSums).sort();
+            const avgPricesYear = sortedPriceYears.map(y => yrPriceSums[y] / yrPriceCounts[y]);
+
+            // 3. Render Charts
+            renderCharts({
+                sales: { labels: sortedSaleMonths, data: saleCounts },
+                decades: { labels: sortedDecades, data: decadeCounts },
+                artists: topArtists,
+                auctions: top15Auctions,
+                priceBuckets: Object.values(priceBuckets),
+                priceBucketsLabels: Object.keys(priceBuckets),
+                avgPriceYears: { labels: sortedPriceYears, data: avgPricesYear }
+            });
+
+            // Reveal Dashboard
+            document.getElementById('loading').style.display = 'none';
+            const dash = document.getElementById('dashboard');
+            dash.classList.remove('hidden');
+            // small delay to allow display:block to apply before fading in
+            setTimeout(() => dash.classList.remove('opacity-0'), 50);
+        }
+
+        function renderCharts(chartData) {
+            // Colors
+            const barColors = chartData.sales.labels.map((_, i) => `hsla(${210 + i*15}, 100%, 65%, 0.8)`);
+            
+            // 1. Sales Chart
+            new Chart(document.getElementById('salesChart').getContext('2d'), {
+                type: 'bar',
+                data: {
+                    labels: chartData.sales.labels,
+                    datasets: [{
+                        label: 'Artworks Sold',
+                        data: chartData.sales.data,
+                        backgroundColor: 'rgba(56, 189, 248, 0.7)',
+                        borderColor: 'rgb(56, 189, 248)',
+                        borderWidth: 1,
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    responsive: true, maintainAspectRatio: false,
+                    plugins: { legend: { display: false } }
+                }
+            });
+
+            // 2. Made Year Chart (Decades)
+            new Chart(document.getElementById('madeYearChart').getContext('2d'), {
+                type: 'line',
+                data: {
+                    labels: chartData.decades.labels,
+                    datasets: [{
+                        label: 'Artworks Created',
+                        data: chartData.decades.data,
+                        backgroundColor: 'rgba(16, 185, 129, 0.2)',
+                        borderColor: 'rgb(16, 185, 129)',
+                        borderWidth: 2,
+                        tension: 0.3,
+                        fill: true,
+                        pointBackgroundColor: 'rgb(16, 185, 129)'
+                    }]
+                },
+                options: {
+                    responsive: true, maintainAspectRatio: false,
+                    plugins: { legend: { display: false } }
+                }
+            });
+
+            // 3. Artists Chart (Horizontal Bar)
+            new Chart(document.getElementById('artistChart').getContext('2d'), {
+                type: 'bar',
+                data: {
+                    labels: chartData.artists.map(a => a[0]),
+                    datasets: [{
+                        label: 'Frequency',
+                        data: chartData.artists.map(a => a[1]),
+                        backgroundColor: 'rgba(167, 139, 250, 0.8)',
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true, maintainAspectRatio: false,
+                    plugins: { legend: { display: false } }
+                }
+            });
+
+            // 4. Auctions Chart (Doughnut)
+            const auctionColors = [
+                '#3b82f6', '#10b981', '#f59e0b', '#ef4444', 
+                '#8b5cf6', '#ec4899', '#06b6d4', '#64748b'
+            ];
+            new Chart(document.getElementById('auctionChart').getContext('2d'), {
+                type: 'doughnut',
+                data: {
+                    labels: chartData.auctions.map(a => a[0]),
+                    datasets: [{
+                        data: chartData.auctions.map(a => a[1]),
+                        backgroundColor: auctionColors.map(c => c + 'cc'),
+                        borderColor: '#1e293b',
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true, maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'right', labels: { color: '#e2e8f0', usePointStyle: true } }
+                    },
+                    cutout: '65%'
+                }
+            });
+
+            // 5. Price Distribution
+            new Chart(document.getElementById('priceDistChart').getContext('2d'), {
+                type: 'bar',
+                data: {
+                    labels: chartData.priceBucketsLabels,
+                    datasets: [{
+                        label: 'Artworks',
+                        data: chartData.priceBuckets,
+                        backgroundColor: 'rgba(244, 63, 94, 0.7)', // rose-500
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    responsive: true, maintainAspectRatio: false,
+                    plugins: { legend: { display: false } }
+                }
+            });
+
+            // 6. Avg Price by Year
+            new Chart(document.getElementById('avgPriceYearChart').getContext('2d'), {
+                type: 'line',
+                data: {
+                    labels: chartData.avgPriceYears.labels,
+                    datasets: [{
+                        label: 'Average Price ($)',
+                        data: chartData.avgPriceYears.data,
+                        backgroundColor: 'rgba(234, 179, 8, 0.2)', // yellow-500
+                        borderColor: 'rgb(234, 179, 8)',
+                        borderWidth: 2,
+                        tension: 0.2,
+                        fill: true,
+                        pointBackgroundColor: 'rgb(234, 179, 8)'
+                    }]
+                },
+                options: {
+                    responsive: true, maintainAspectRatio: false,
+                    plugins: { legend: { display: false } }
+                }
+            });
+        }
+    </script>
+</body>
+</html>

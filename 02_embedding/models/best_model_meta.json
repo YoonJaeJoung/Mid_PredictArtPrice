@@ -1,0 +1,16 @@
+{
+  "image_only": {
+    "model_name": "XGBoost",
+    "mae_log": 1.4028207063674927,
+    "rmse_log": 1.7931676018840668,
+    "mae_usd": 51861.52734375,
+    "rmse_usd": 1895725.0630700644
+  },
+  "multimodal": {
+    "model_name": "XGBoost",
+    "mae_log": 1.2440581321716309,
+    "rmse_log": 1.601025821737272,
+    "mae_usd": 51223.296875,
+    "rmse_usd": 1895538.650233226
+  }
+}

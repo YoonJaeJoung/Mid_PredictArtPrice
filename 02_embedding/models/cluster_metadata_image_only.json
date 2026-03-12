@@ -1,0 +1,722 @@
+[
+  {
+    "cluster_id": 0,
+    "count": 2086,
+    "avg_price": 12390.4769894535,
+    "median_price": 2455.0,
+    "min_price": 11.0,
+    "max_price": 3577198.0,
+    "std_price": 89520.2118829259,
+    "representative_artworks": [
+      {
+        "id": "7489",
+        "title": "竹樹石圖",
+        "artist": "Xu Zhong'An",
+        "price": 6527.0
+      },
+      {
+        "id": "81520",
+        "title": "墨梅·行书",
+        "artist": "Wu Changshuo and Ye Changchi",
+        "price": 11410.0
+      },
+      {
+        "id": "62926",
+        "title": "水仙",
+        "artist": "Huang Binhong",
+        "price": 4065.0
+      },
+      {
+        "id": "93937",
+        "title": "金穗红蜓图",
+        "artist": "Jin Yao",
+        "price": 2461.0
+      },
+      {
+        "id": "93844",
+        "title": "山中高士图",
+        "artist": "Jiang Zhu",
+        "price": 6893.0
+      },
+      {
+        "id": "7367",
+        "title": "林亭秋爽圖",
+        "artist": "Wang Jingming",
+        "price": 7343.0
+      },
+      {
+        "id": "92361",
+        "title": "泛舟图",
+        "artist": "Zhang Hong",
+        "price": 3557.0
+      },
+      {
+        "id": "28737",
+        "title": "行书七言诗",
+        "artist": "Huang Binhong",
+        "price": 4324.0
+      },
+      {
+        "id": "91047",
+        "title": "风尘三侠 草书",
+        "artist": "Hua Yuan and Wang Tan",
+        "price": 816.0
+      },
+      {
+        "id": "7480",
+        "title": "楷書滿庭芳詞",
+        "artist": "Shen Hanguang",
+        "price": 11423.0
+      }
+    ],
+    "description": "Traditional Chinese ink paintings, calligraphy scrolls, and classical East Asian brush-and-ink works on paper."
+  },
+  {
+    "cluster_id": 1,
+    "count": 16381,
+    "avg_price": 39174.29021427263,
+    "median_price": 2133.0,
+    "min_price": 2.0,
+    "max_price": 54660000.0,
+    "std_price": 633419.0869443796,
+    "representative_artworks": [
+      {
+        "id": "86188",
+        "title": "Composition",
+        "artist": "Erik A. Frandsen",
+        "price": 212.0
+      },
+      {
+        "id": "54876",
+        "title": "Untitled",
+        "artist": "Tamas Konok",
+        "price": 346.0
+      },
+      {
+        "id": "83680",
+        "title": "PEINTURE À L’ENCRE ET COULEURS SUR SOIE, Chine",
+        "artist": "Anonymous-Chinese (Qing Dynasty)",
+        "price": 623.0
+      },
+      {
+        "id": "58168",
+        "title": "Still Life with Vertical Blinds",
+        "artist": "David Neville Andrew",
+        "price": 423.0
+      },
+      {
+        "id": "61696",
+        "title": "Flower Meanings",
+        "artist": "Dennis Hwang",
+        "price": 4584.0
+      },
+      {
+        "id": "51677",
+        "title": "Still Life and Garden View",
+        "artist": "Elizabeth Cope",
+        "price": 5990.0
+      },
+      {
+        "id": "3681",
+        "title": "FLOWERS",
+        "artist": "Wu Changshuo",
+        "price": 92518.0
+      },
+      {
+        "id": "93165",
+        "title": "三清图",
+        "artist": "Wu Changshuo",
+        "price": 13458.0
+      },
+      {
+        "id": "54597",
+        "title": "Radical Realism I (6 works)",
+        "artist": "Various Artists (Portfolios)",
+        "price": 6400.0
+      },
+      {
+        "id": "33256",
+        "title": "Bird's Nest",
+        "artist": "Sherrie McGraw",
+        "price": 1152.0
+      }
+    ],
+    "description": "Diverse mid-range paintings spanning still lifes, florals, and figurative compositions from global contemporary and modern artists."
+  },
+  {
+    "cluster_id": 2,
+    "count": 14741,
+    "avg_price": 39898.202089410486,
+    "median_price": 1950.0,
+    "min_price": 2.0,
+    "max_price": 68320000.0,
+    "std_price": 767230.7483100236,
+    "representative_artworks": [
+      {
+        "id": "66684",
+        "title": "A view of Santa Maura, Levkas, Ionian Islands",
+        "artist": "Edward Lear",
+        "price": 5925.0
+      },
+      {
+        "id": "2837",
+        "title": "“November Dawn: Strensall Common, York”",
+        "artist": "Piers Browne",
+        "price": 471.0
+      },
+      {
+        "id": "57171",
+        "title": "Solicitudo rustica",
+        "artist": "After Pieter Bruegel the Elder",
+        "price": 4346.0
+      },
+      {
+        "id": "111361",
+        "title": "WINTER",
+        "artist": "Edward Steel Harper",
+        "price": 546.0
+      },
+      {
+        "id": "105238",
+        "title": "Der Engel erscheint Hagar",
+        "artist": "Dutch School (17)",
+        "price": 1340.0
+      },
+      {
+        "id": "116688",
+        "title": "Paysage",
+        "artist": "Pierre Tal-Coat",
+        "price": 1230.0
+      },
+      {
+        "id": "60353",
+        "title": "FLACHE LANDSCHAFT MIT STADT",
+        "artist": "Ignaz Stolz the Younger",
+        "price": 371.0
+      },
+      {
+        "id": "76749",
+        "title": "Dusk, Cromer",
+        "artist": "Paul Darley",
+        "price": 525.0
+      },
+      {
+        "id": "47419",
+        "title": "\"A Wooded River Landscape with Fisherfolk in the Foreground\"",
+        "artist": "Follower of Albert Meyeringh",
+        "price": 1625.0
+      },
+      {
+        "id": "49882",
+        "title": "\"River City\"",
+        "artist": "Tom Richard Cavanaugh",
+        "price": 1250.0
+      }
+    ],
+    "description": "European and Old Master landscapes — pastoral views, river scenes, and rural townscapes from the 17th–20th centuries."
+  },
+  {
+    "cluster_id": 3,
+    "count": 13251,
+    "avg_price": 36515.026262168896,
+    "median_price": 1700.0,
+    "min_price": 5.0,
+    "max_price": 86000000.0,
+    "std_price": 985871.4987193479,
+    "representative_artworks": [
+      {
+        "id": "74803",
+        "title": "Gloucester",
+        "artist": "Edward Henry Potthast",
+        "price": 768.0
+      },
+      {
+        "id": "24155",
+        "title": "Venetian Lagoon",
+        "artist": "Stefano Bersani",
+        "price": 451.0
+      },
+      {
+        "id": "60861",
+        "title": "KANAL IN VENEDIG",
+        "artist": "Artur Nikodem",
+        "price": 707.0
+      },
+      {
+        "id": "121748",
+        "title": "Industrial Cityscape",
+        "artist": "Geoffrey Key",
+        "price": 2696.0
+      },
+      {
+        "id": "107079",
+        "title": "\"În port\"",
+        "artist": "Jean Alexandru Steriadi",
+        "price": 2093.0
+      },
+      {
+        "id": "95696",
+        "title": "Scorcio di paese",
+        "artist": "Oscar Ricciardi",
+        "price": 209.0
+      },
+      {
+        "id": "54942",
+        "title": "Scenă dobrogeană",
+        "artist": "Henri H. Catargi",
+        "price": 1386.0
+      },
+      {
+        "id": "97678",
+        "title": "COASTAL WALL",
+        "artist": "Earl George Alexander Eugene Douglas Haig",
+        "price": 2731.0
+      },
+      {
+        "id": "47308",
+        "title": "LIGHT GLOW, PORTENCROSS",
+        "artist": "Peter Foyle",
+        "price": 209.0
+      },
+      {
+        "id": "30919",
+        "title": "Häuser am Pöstlingberg",
+        "artist": "Anton Lutz",
+        "price": 8215.0
+      }
+    ],
+    "description": "Impressionist and plein-air coastal, harbor, and urban cityscapes with emphasis on light, atmosphere, and architectural settings."
+  },
+  {
+    "cluster_id": 4,
+    "count": 17354,
+    "avg_price": 25706.593062118245,
+    "median_price": 1452.0,
+    "min_price": 2.0,
+    "max_price": 31388049.0,
+    "std_price": 336099.8180787526,
+    "representative_artworks": [
+      {
+        "id": "17743",
+        "title": "A Seed Planted Gently",
+        "artist": "Giorgiko",
+        "price": 660.0
+      },
+      {
+        "id": "81263",
+        "title": "The Three Acrobats",
+        "artist": "Marc Chagall",
+        "price": 8542.0
+      },
+      {
+        "id": "72486",
+        "title": "Sem título",
+        "artist": "Malangatana Valente Ngwenya",
+        "price": 581.0
+      },
+      {
+        "id": "74946",
+        "title": "“Métamorphose”",
+        "artist": "Corneille",
+        "price": 171.0
+      },
+      {
+        "id": "117803",
+        "title": "Bishamonten",
+        "artist": "Kazuyuki Takishita",
+        "price": 593.0
+      },
+      {
+        "id": "91083",
+        "title": "夏日钟馗",
+        "artist": "Zhang Guiming",
+        "price": 2939.0
+      },
+      {
+        "id": "99899",
+        "title": "Untitled",
+        "artist": "Erik A. Frandsen",
+        "price": 133.0
+      },
+      {
+        "id": "65952",
+        "title": "“Chagall Lithographe III 1962–1968 - Frontispice”",
+        "artist": "Marc Chagall",
+        "price": 10609.0
+      },
+      {
+        "id": "18480",
+        "title": "L'Aigrette Rouge",
+        "artist": "Joan Miró",
+        "price": 17780.0
+      },
+      {
+        "id": "89155",
+        "title": "Crab Fishermen",
+        "artist": "Emmy Lou Packard",
+        "price": 1100.0
+      }
+    ],
+    "description": "Colorful prints, lithographs, and works on paper by modern masters (Chagall, Miró) and mid-century figurative/expressive artists."
+  },
+  {
+    "cluster_id": 5,
+    "count": 12870,
+    "avg_price": 33914.775524475524,
+    "median_price": 1986.0,
+    "min_price": 11.0,
+    "max_price": 48335000.0,
+    "std_price": 531485.9821589257,
+    "representative_artworks": [
+      {
+        "id": "13670",
+        "title": "untitled",
+        "artist": "Sam Middleton",
+        "price": 1000.0
+      },
+      {
+        "id": "59320",
+        "title": "Couple",
+        "artist": "Bert Jäger",
+        "price": 1507.0
+      },
+      {
+        "id": "27883",
+        "title": "‘Decay’",
+        "artist": "VHILS",
+        "price": 575.0
+      },
+      {
+        "id": "44236",
+        "title": "Foggy picture",
+        "artist": "Aron Gabor",
+        "price": 2117.0
+      },
+      {
+        "id": "65348",
+        "title": "Composition",
+        "artist": "Antonio Corpora",
+        "price": 119.0
+      },
+      {
+        "id": "34605",
+        "title": "Komposition mit weiblicher Figur und Leiter",
+        "artist": "Stefan Plenkers",
+        "price": 5552.0
+      },
+      {
+        "id": "7104",
+        "title": "Mixed Lot of 3 Works on Paper",
+        "artist": "Antonius van der Pas",
+        "price": 471.0
+      },
+      {
+        "id": "110208",
+        "title": "IO E LA CITTA'",
+        "artist": "Enos Malagutti",
+        "price": 401.0
+      },
+      {
+        "id": "67517",
+        "title": "Sans titre",
+        "artist": "Zao Wou-Ki",
+        "price": 2246.0
+      },
+      {
+        "id": "52628",
+        "title": "Sans titre",
+        "artist": "Jean-Paul Riopelle",
+        "price": 23038.0
+      }
+    ],
+    "description": "Post-war and contemporary abstract compositions — gestural, lyrical, and mixed-media works by European and international abstractionists."
+  },
+  {
+    "cluster_id": 6,
+    "count": 11024,
+    "avg_price": 38206.03066037736,
+    "median_price": 2095.0,
+    "min_price": 5.0,
+    "max_price": 31367705.0,
+    "std_price": 472445.6708769794,
+    "representative_artworks": [
+      {
+        "id": "31413",
+        "title": "Miss Sarah, Lowell, Massachusetts",
+        "artist": "Samuel P. Howes",
+        "price": 192.0
+      },
+      {
+        "id": "65855",
+        "title": "An Allegory of Painting",
+        "artist": "Italian School-Neapolitan (17)",
+        "price": 160845.0
+      },
+      {
+        "id": "116414",
+        "title": "Ritratto di gentildonna",
+        "artist": "Anonymous (19)",
+        "price": 377.0
+      },
+      {
+        "id": "73706",
+        "title": "Portrait de gentilhomme, avec armoiries",
+        "artist": "Flemish School (17)",
+        "price": 697.0
+      },
+      {
+        "id": "9352",
+        "title": "Cristo benedicente",
+        "artist": "Attributed to Rocco Marconi",
+        "price": 3482.0
+      },
+      {
+        "id": "105534",
+        "title": "At the Theater.",
+        "artist": "Albert Pels",
+        "price": 1143.0
+      },
+      {
+        "id": "68348",
+        "title": "Portrait d'Elisabeth Vigée-Lebrun (1755-1842)",
+        "artist": "Style of Elisabeth Louise Vigée Le Brun",
+        "price": 1818.0
+      },
+      {
+        "id": "19249",
+        "title": "Portrait of a young lady, probably Anna Elisabeth Luise von Brandenburg-Schwedt, Princess Ferdinand of Prussia (1738–1820), wearing a fur trimmed blue cloak and holding a mask",
+        "artist": "Charles Amédée Philippe van Loo",
+        "price": 13122.0
+      },
+      {
+        "id": "37735",
+        "title": "Portrait of a lady, identified as Mrs Cherry, seated half-length, wearing a white bonnet and a black dress with a white collar",
+        "artist": "John Linnell",
+        "price": 861.0
+      },
+      {
+        "id": "64098",
+        "title": "Femme au bouquet",
+        "artist": "Gustave de Smet",
+        "price": 44173.0
+      }
+    ],
+    "description": "Portraiture and figurative works — classical, Baroque, and academic portraits alongside genre scenes with human subjects."
+  },
+  {
+    "cluster_id": 7,
+    "count": 14644,
+    "avg_price": 39413.05456159519,
+    "median_price": 1900.0,
+    "min_price": 2.0,
+    "max_price": 62160000.0,
+    "std_price": 666142.8026638265,
+    "representative_artworks": [
+      {
+        "id": "101792",
+        "title": "La translunaire",
+        "artist": "Joan Miró",
+        "price": 2601.0
+      },
+      {
+        "id": "46341",
+        "title": "Lot et Garonne",
+        "artist": "Jacques Villeglé",
+        "price": 2100.0
+      },
+      {
+        "id": "71642",
+        "title": "Trees Blowing and Blowing Like Arms Akimbo",
+        "artist": "Steven Sorman",
+        "price": 191.0
+      },
+      {
+        "id": "107893",
+        "title": "Eclipse",
+        "artist": "Sonia Delaunay",
+        "price": 1787.0
+      },
+      {
+        "id": "116564",
+        "title": "Six works from the mythological scenes series",
+        "artist": "Joe Tilson",
+        "price": 2663.0
+      },
+      {
+        "id": "53511",
+        "title": "Petite barrière",
+        "artist": "Joan Miró",
+        "price": 2853.0
+      },
+      {
+        "id": "23202",
+        "title": "Hot Slick",
+        "artist": "Bruce McLean",
+        "price": 773.0
+      },
+      {
+        "id": "120814",
+        "title": "Hot Slick",
+        "artist": "Bruce McLean",
+        "price": 510.0
+      },
+      {
+        "id": "100534",
+        "title": "In Celebration",
+        "artist": "Robert Motherwell",
+        "price": 2125.0
+      },
+      {
+        "id": "107642",
+        "title": "FACE TO FACE",
+        "artist": "Abdoulaye Ndoye",
+        "price": 275.0
+      }
+    ],
+    "description": "Modern graphic works, bold color lithographs, and contemporary prints by established 20th-century names (Miró, Delaunay, Motherwell)."
+  },
+  {
+    "cluster_id": 8,
+    "count": 16232,
+    "avg_price": 62509.98558403154,
+    "median_price": 1953.0,
+    "min_price": 2.0,
+    "max_price": 236360000.0,
+    "std_price": 1984647.9353445845,
+    "representative_artworks": [
+      {
+        "id": "55742",
+        "title": "Jesus als Knabe unter den Schriftgelehrten",
+        "artist": "Rembrandt van Rijn",
+        "price": 1738.0
+      },
+      {
+        "id": "48930",
+        "title": "Ídolo (Oyá/Divinité de l'air et de la mort)",
+        "artist": "Wifredo Lam",
+        "price": 7370000.0
+      },
+      {
+        "id": "63862",
+        "title": "Gschnasfest I",
+        "artist": "Alfred Gerstenbrand",
+        "price": 1159.0
+      },
+      {
+        "id": "32912",
+        "title": "ENGEL",
+        "artist": "Follower of Mikhail Aleksandrovich Vrubel",
+        "price": 1153.0
+      },
+      {
+        "id": "83687",
+        "title": "Setting the Conflagration Editorial Comics Panel Original Art",
+        "artist": "Samuel Armstrong",
+        "price": 169.0
+      },
+      {
+        "id": "63565",
+        "title": "FIGURE E CAVALIERE",
+        "artist": "Mario Sironi",
+        "price": 1159.0
+      },
+      {
+        "id": "36553",
+        "title": "Jessica, Angie Dickinson and Maurice Chevalier, original cartoon",
+        "artist": "Albert Hirschfeld",
+        "price": 1500.0
+      },
+      {
+        "id": "80302",
+        "title": "The Hopes of the Party",
+        "artist": "James Gillray",
+        "price": 683.0
+      },
+      {
+        "id": "100491",
+        "title": "Le grand cirque",
+        "artist": "Marc Chagall",
+        "price": 4500.0
+      },
+      {
+        "id": "97020",
+        "title": "\"Studie II zu Marco Polo\"",
+        "artist": "Alfred Hrdlicka",
+        "price": 211.0
+      }
+    ],
+    "description": "Works on paper — etchings, drawings, caricatures, and editorial illustrations spanning Old Masters to 20th-century graphic art; highest price ceiling cluster (M)."
+  },
+  {
+    "cluster_id": 9,
+    "count": 3356,
+    "avg_price": 41243.00506555423,
+    "median_price": 7133.0,
+    "min_price": 34.0,
+    "max_price": 5666300.0,
+    "std_price": 221735.80194860123,
+    "representative_artworks": [
+      {
+        "id": "62672",
+        "title": "行书七言联",
+        "artist": "Yang Tianlin",
+        "price": 2926.0
+      },
+      {
+        "id": "93062",
+        "title": "行书诗",
+        "artist": "Pu Ru",
+        "price": 1641.0
+      },
+      {
+        "id": "92140",
+        "title": "行书 临颜真卿《乞米帖》",
+        "artist": "Liang Yan",
+        "price": 12805.0
+      },
+      {
+        "id": "93766",
+        "title": "为蒋复璁作 行书自作诗",
+        "artist": "Ma Yifu",
+        "price": 18875.0
+      },
+      {
+        "id": "90626",
+        "title": "书法",
+        "artist": "Huang Yanpei",
+        "price": 1469.0
+      },
+      {
+        "id": "86423",
+        "title": "行书",
+        "artist": "Feng Youlan",
+        "price": 2449.0
+      },
+      {
+        "id": "90593",
+        "title": "行书",
+        "artist": "Cheng Shifa",
+        "price": 1633.0
+      },
+      {
+        "id": "27572",
+        "title": "行书祝寿诗",
+        "artist": "Huang Binhong",
+        "price": 34752.0
+      },
+      {
+        "id": "92673",
+        "title": "行书五言诗",
+        "artist": "Ma Yifu",
+        "price": 18052.0
+      },
+      {
+        "id": "90239",
+        "title": "行书",
+        "artist": "Zhou Huijun",
+        "price": 1306.0
+      }
+    ],
+    "description": "Premium Chinese calligraphy — running script (行書) works by renowned scholars and literati painters; highest median price cluster (,133)."
+  }
+]
